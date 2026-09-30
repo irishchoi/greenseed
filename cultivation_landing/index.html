@@ -1,126 +1,448 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <!-- 문서 기본 메타 정보 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고장재배장치 - 미래 농업의 기준</title>
-    <meta name="description" content="최첨단 스마트팜 기술이 집약된 고장재배장치. 완벽한 자동화와 최적의 생육 환경을 경험하세요.">
-    <!-- Google Fonts -->
+    <title>그린씨드 x 부산대학교 - 대과종 수박 고상재배장치 사업·연구 실증 제안서</title>
+    <meta name="description" content="농촌진흥청·한국농업기술진흥원·부산대학교 산학협력 연구실증 완료. 대과종 수박 생산성 증대 및 생력화를 위한 데이터 기반 고상재배장치.">
+    
+    <!-- 웹 폰트 (Pretendard) 로드 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- 스타일시트 연결 -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- 1. 상단 내비게이션 바 (헤더) -->
     <header class="navbar">
-        <div class="logo">GOJANG<span>FARM</span></div>
+        <div class="logo">
+            <!-- 브랜드 로고 및 주관기관 안내 -->
+            GREENSEED<span> FARM</span>
+            <span class="badge">부산대학교 산학협력 실증</span>
+        </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#technology">Technology</a></li>
+                <li><a href="#overview">과제 개요</a></li>
+                <li><a href="#patents">특허 기술</a></li>
+                <li><a href="#gallery">현장 갤러리</a></li>
+                <li><a href="#data-results">실증 성과 데이터</a></li>
+                <li><a href="#farms">전국 실증 농가</a></li>
+                <li><a href="#spec">표준 규격</a></li>
             </ul>
         </nav>
-        <a href="#contact" class="btn-primary-outline">문의하기</a>
+        <div class="nav-actions">
+            <a href="#contact" class="btn-primary-sm">사업·보조사업 제안 문의</a>
+        </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
+        <!-- 2. 메인 히어로 섹션 (정부 과제 표지 & 핵심 성과) -->
+        <section id="overview" class="hero">
             <div class="hero-bg">
-                <!-- Using a high quality unsplash image of an indoor farm/plants -->
-                <img src="https://images.unsplash.com/photo-1530836369250-ef71a3f5e9da?q=80&w=2000&auto=format&fit=crop" alt="Smart Farming Background">
+                <!-- 실제 제천 실증 현장 고화질 배경 이미지 -->
+                <img src="images/farm_hero.jpg" alt="수박 고상재배 실증 현장 배경">
                 <div class="overlay"></div>
             </div>
             <div class="hero-content reveal">
-                <h1>자연과 기술의 완벽한 조화<br><span class="highlight">고장재배장치</span></h1>
-                <p>계절과 환경의 제약을 뛰어넘는 스마트팜 솔루션. 당신의 공간을 가장 효율적인 농장으로 바꾸어 드립니다.</p>
+                <!-- 공식 인증 및 과제 뱃지 -->
+                <div class="hero-badges">
+                    <span class="tag-pill">🏛️ 농촌진흥청 · 한국농업기술진흥원 과제</span>
+                    <span class="tag-pill">🎓 부산대학교 산학협력단 주관 (2025-BA-03-001)</span>
+                    <span class="tag-pill">📜 등록 특허 10-3017483 보유</span>
+                </div>
+                
+                <h1>
+                    대과종 수박 생산성 극대화 & 생력화<br>
+                    <span class="highlight">데이터 기반 스마트 고상재배장치</span>
+                </h1>
+                
+                <p class="hero-desc">
+                    포복(바닥) 재배의 한계를 뛰어넘어 <strong>노동 피로도를 60% 이상 절감</strong>하고, 
+                    정밀 데이터 관수와 메쉬 베드 구조로 <strong>8~10kg 특품 대과종 수박 360도 완벽 착색</strong>을 실현한 정부 실증 검증 솔루션입니다.
+                </p>
+                
+                <!-- 주요 액션 버튼 -->
                 <div class="hero-buttons">
-                    <a href="#features" class="btn-primary">제품 알아보기</a>
-                    <a href="#technology" class="btn-secondary">기술 사양</a>
+                    <a href="#gallery" class="btn-primary">실증 현장 사진 보기</a>
+                    <a href="#patents" class="btn-secondary">3대 핵심 특허 기술</a>
+                </div>
+
+                <!-- 실증 핵심 성과 지표 4종 -->
+                <div class="hero-stats-grid">
+                    <div class="stat-card glass-card">
+                        <span class="stat-num" data-target="62">0</span><span class="stat-unit">%↓</span>
+                        <span class="stat-label">수확·유인 노동력 절감</span>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <span class="stat-num" data-target="91">0</span><span class="stat-unit">.5%</span>
+                        <span class="stat-label">특품(상품과) 출현율</span>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <span class="stat-num" data-target="90">0</span><span class="stat-unit">%↓</span>
+                        <span class="stat-label">토양 전염성 병해 억제</span>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <span class="stat-num" data-target="9">0</span><span class="stat-unit">개소</span>
+                        <span class="stat-label">전국 거점 실증 농가</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Features Section -->
-        <section id="features" class="features">
+        <!-- 3. 포복재배의 한계 vs 고상재배장치의 혁신 -->
+        <section class="section problem-solution">
             <div class="section-header reveal">
-                <h2>왜 고장재배장치인가요?</h2>
-                <p>초보자부터 전문가까지 모두 만족하는 압도적인 퍼포먼스</p>
+                <span class="section-subtitle">INNOVATION & NECESSITY</span>
+                <h2>왜 수박 '고상(高床)재배'여야 하는가?</h2>
+                <p>기존 바닥 포복재배의 고질적인 노동 문제와 연작 피해를 과학적으로 해결했습니다.</p>
             </div>
-            
-            <div class="features-grid">
-                <!-- Feature 1 -->
-                <div class="glass-card feature-card reveal">
-                    <div class="icon-wrapper">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    </div>
-                    <h3>완벽한 자동화</h3>
-                    <p>빛, 온도, 습도, 영양액 공급까지 모든 과정을 시스템이 자동으로 제어하여 손쉬운 재배가 가능합니다.</p>
-                </div>
-                
-                <!-- Feature 2 -->
-                <div class="glass-card feature-card reveal delay-1">
-                    <div class="icon-wrapper">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-                    </div>
-                    <h3>공간 효율성 극대화</h3>
-                    <p>수직형 다단 재배 구조를 채택하여 좁은 공간에서도 기존 대비 3배 이상의 압도적인 수확량을 자랑합니다.</p>
-                </div>
-                
-                <!-- Feature 3 -->
-                <div class="glass-card feature-card reveal delay-2">
-                    <div class="icon-wrapper">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <h3>최적의 생육 환경</h3>
-                    <p>작물별 맞춤형 LED 파장과 공기 순환 시스템으로 병해충을 방지하고 최고 품질의 작물을 생산합니다.</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- Technology Section -->
-        <section id="technology" class="technology">
-            <div class="tech-container">
-                <div class="tech-image reveal">
-                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1000&auto=format&fit=crop" alt="Technology Detail">
+            <div class="comparison-grid">
+                <!-- 기존 포복재배의 한계 -->
+                <div class="comparison-card glass-card bad reveal">
+                    <div class="card-tag bad-tag">기존 바닥 포복재배의 한계</div>
+                    <ul class="check-list bad-list">
+                        <li><strong>과도한 허리 굽힘 노동:</strong> 75도 이상 허리를 숙여 8~10kg 대과를 수확하여 농업인 근골격계 질환 다발</li>
+                        <li><strong>햇빛 차단 및 반점(황변) 발생:</strong> 바닥에 닿는 면의 착색 불량으로 과실을 일일이 뒤집어주는 과도한 노동 필요</li>
+                        <li><strong>토양 전염병 및 연작 장해:</strong> 덩굴마름병, 탄저병, 역병 등 토양 균 감염으로 매년 폐사율 증가</li>
+                        <li><strong>기후·침수 피해:</strong> 하우스 내 지면 과습 및 침수 시 뿌리 썩음 발생</li>
+                    </ul>
                 </div>
-                <div class="tech-text reveal delay-1">
-                    <h2>스마트팜의 미래를<br>당신의 공간에</h2>
-                    <p>고장재배장치는 복잡한 설정 없이 플러그 앤 플레이(Plug & Play) 방식으로 바로 사용할 수 있습니다. IoT 센서가 실시간으로 데이터를 수집하고 모바일 앱을 통해 언제 어디서나 농장을 모니터링하세요.</p>
-                    <ul class="tech-list">
-                        <li><strong>IoT 센서 모니터링:</strong> 실시간 환경 데이터 수집</li>
-                        <li><strong>에너지 효율:</strong> 저전력 고효율 식물 생장용 LED</li>
-                        <li><strong>클린 워터 시스템:</strong> 자동 순환 필터링 수경재배</li>
+
+                <!-- 고상재배장치 솔루션 -->
+                <div class="comparison-card glass-card good reveal delay-1">
+                    <div class="card-tag good-tag">그린씨드 고상재배장치 혁신 솔루션</div>
+                    <ul class="check-list good-list">
+                        <li><strong>인체공학적 직립 작업 (15도):</strong> 지상 85~110cm 베드 높이로 서서 편안하게 유인 및 수확 가능 (여성·고령농 최적화)</li>
+                        <li><strong>360도 전면 균일 착색 & 고당도:</strong> 공중 거치 구조로 과실 뒤집기 불필요, 햇빛 100% 수광으로 12 Brix 이상 균일 당도</li>
+                        <li><strong>연작 장해 100% 원천 차단:</strong> 독립형 메쉬 베드 격리 재배로 토양 병원균 오염 차단, 무농약 친환경 재배 가능</li>
+                        <li><strong>데이터 기반 정밀 점적 관수:</strong> 수분 스트레스 최소화 및 생육 단계별 최적 양액 공급으로 열과(터짐) 방지</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section id="contact" class="cta">
-            <div class="cta-content glass-card reveal">
-                <h2>새로운 농업의 시작, 지금 바로 경험하세요</h2>
-                <p>전문 컨설턴트가 당신의 공간에 맞는 최적의 시스템을 제안해 드립니다.</p>
-                <form class="contact-form" onsubmit="event.preventDefault(); alert('상담 신청이 완료되었습니다.');">
-                    <input type="text" placeholder="성함" required>
-                    <input type="tel" placeholder="연락처" required>
-                    <button type="submit" class="btn-primary">무료 상담 신청하기</button>
+        <!-- 4. 시각적 이해를 위한 현장 이미지 갤러리 섹션 (신설) -->
+        <section id="gallery" class="section gallery-section">
+            <div class="section-header reveal">
+                <span class="section-subtitle">REAL FIELD GALLERY</span>
+                <h2>📷 고상재배장치 현장 실증 사진</h2>
+                <p>실제 제천·창원·고창 농가에 설치된 고상재배 생육 현장 및 특허 구조입니다.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- 갤러리 카드 1: 고상재배 수박 생육 전경 -->
+                <div class="glass-card gallery-card reveal">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/watermelon_real1.jpg" alt="고상재배 수박 생육 현장">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="gallery-badge">실증 현장</span>
+                        <h3>충북 제천 실증농장 수박 생육</h3>
+                        <p>지상에서 띄운 공중 베드에서 대과종 수박이 활발하게 성육하는 실제 현장 모습입니다.</p>
+                    </div>
+                </div>
+
+                <!-- 갤러리 카드 2: 360도 전면 균일 착색 대과 -->
+                <div class="glass-card gallery-card reveal delay-1">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/watermelon_real2.jpg" alt="360도 균일 착색 대과종 수박">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="gallery-badge">품질 비교</span>
+                        <h3>360도 전면 착색 & 특품 대과</h3>
+                        <p>바닥 황변 현상이 없고 일관되게 햇빛을 받아 8~10kg 이상 최상품으로 수확됩니다.</p>
+                    </div>
+                </div>
+
+                <!-- 갤러리 카드 3: 특허 고강력 알루미늄 프레임 -->
+                <div class="glass-card gallery-card reveal delay-2">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/patent_frame.jpg" alt="특허 알루미늄 지주대 구조">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="gallery-badge">특허 구조</span>
+                        <h3>고하중 특수 알루미늄 지주대</h3>
+                        <p>수십 과실의 무게를 견디는 고내식성 합금 프레임과 메쉬 베드 정밀 공학 설계입니다.</p>
+                    </div>
+                </div>
+
+                <!-- 갤러리 카드 4: 인체공학적 작업 환경 -->
+                <div class="glass-card gallery-card reveal">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/farm_worker.jpg" alt="서서 일하는 인체공학적 작업">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="gallery-badge">생력화 효과</span>
+                        <h3>서서 수행하는 인체공학적 유인작업</h3>
+                        <p>허리 피로도를 줄여 여성농 및 고령 농업인도 손쉽게 관리할 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 핵심 특허 및 지식재산권 (Patents) -->
+        <section id="patents" class="section patents-section">
+            <div class="section-header reveal">
+                <span class="section-subtitle">INTELLECTUAL PROPERTY</span>
+                <h2>검증된 3대 독자 특허 & 실용신안 기술</h2>
+                <p>10kg 이상 대과종 수박의 고하중을 완벽하게 지지하고 생육을 촉진하는 독보적 설계</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- 특허 1 -->
+                <div class="glass-card feature-card reveal">
+                    <div class="icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div class="patent-meta">[등록 특허] 제 10-3017483 호</div>
+                    <h3>모듈형 수박 수직재배장치</h3>
+                    <p>대과종 수박의 생육 단계에 맞춰 프레임을 유연하게 확장하고, 작물 하중을 안전하게 분산시키는 모듈러 결합형 고상 재배 구조 기술입니다.</p>
+                </div>
+
+                <!-- 특허 2 -->
+                <div class="glass-card feature-card reveal delay-1">
+                    <div class="icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                    </div>
+                    <div class="patent-meta">[출원 특허] AP070909 (2026)</div>
+                    <h3>스마트팜용 메쉬베드형 재배 시스템</h3>
+                    <p>대과종 박과류 전용 메쉬형 통기 베드를 적용하여 뿌리의 산소 흡수를 극대화하고, 잔여 양액의 신속한 배수로 뿌리 썩음을 방지합니다.</p>
+                </div>
+
+                <!-- 특허 3 -->
+                <div class="glass-card feature-card reveal delay-2">
+                    <div class="icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <div class="patent-meta">[실용신안] 제 20-2026-0002519 호</div>
+                    <h3>고하중 알루미늄 파형 지주대</h3>
+                    <p>파형 요철 및 블레이드 편평 압착부를 적용한 특수 알루미늄 지주대로, 가벼우면서도 수박 수십 과실의 초고하중을 견디는 특수 설계입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. 실제 연구 실증 성과 데이터 대시보드 -->
+        <section id="data-results" class="section research-data">
+            <div class="section-header reveal">
+                <span class="section-subtitle">REAL FIELD RESEARCH DATA</span>
+                <h2>정부 과제 현장 실증 결과 데이터</h2>
+                <p>부산대학교 산학협력단 및 실증 농가에서 정밀 측정한 실제 수확 및 품질 지표입니다.</p>
+            </div>
+
+            <!-- 실증 데이터 대시보드 인터랙티브 탭 -->
+            <div class="crop-tabs-container glass-card reveal">
+                <div class="crop-tab-buttons">
+                    <button class="crop-tab-btn active" data-crop="watermelon">🍉 대과종 수박 (제천·고창 실증)</button>
+                    <button class="crop-tab-btn" data-crop="melon">🍈 고품질 멜론 (창원·안성 실증)</button>
+                    <button class="crop-tab-btn" data-crop="irrigation">💧 데이터 관수량 비교 분석</button>
+                </div>
+
+                <div class="crop-tab-content">
+                    <div class="crop-detail-left">
+                        <h3 id="cropTitle">🍉 대과종 수박 실증 출하 결과 (제천 박영수 농가)</h3>
+                        <p id="cropDesc">1차 출하 총 431수 중 7~10kg 대과 비중이 75% 이상을 기록하며 최상품 비율을 대폭 끌어올렸습니다.</p>
+                        
+                        <div class="crop-metrics-list">
+                            <div class="metric-row">
+                                <span class="metric-name">8~10kg 대과 출현율</span>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%;"></div></div>
+                                <span class="metric-val">1차 145수 달성</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-name">노동 시간 절감률</span>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill highlight-fill" style="width: 62%;"></div></div>
+                                <span class="metric-val">62% 대폭 절감</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-name">360도 전면 착색률</span>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 99%;"></div></div>
+                                <span class="metric-val">99.5% (황변 없음)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="crop-detail-right">
+                        <div class="highlight-box">
+                            <h4>💡 산학협력 연구책임자 종합 평가</h4>
+                            <p>"지상 1m 고상 메쉬 베드 구조를 통해 바닥 닿는 부위의 황변 현상이 완전히 제거되었으며, 서서 작업하는 인체공학적 환경 구축으로 수박 재배 농가의 최대 난제인 노동력 부족 문제를 실질적으로 해결함."</p>
+                            <span class="citation">- 부산대학교 원예생명과학과 안성광 교수 연구팀</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. 전국 거점 실증 농가 현황 (Farms) -->
+        <section id="farms" class="section farms-section">
+            <div class="section-header reveal">
+                <span class="section-subtitle">NATIONWIDE TESTBED FARMS</span>
+                <h2>전국 4대 권역 거점 실증 농가 네트워크</h2>
+                <p>2025년 4개 농가에서 2026년 9개 농가로 확대 검증된 고상재배장치 현장</p>
+            </div>
+
+            <div class="farms-grid">
+                <!-- 농가 1 -->
+                <div class="glass-card farm-card reveal">
+                    <div class="farm-region">경남 창원</div>
+                    <h3>이든팜 (김기민 농가)</h3>
+                    <p class="farm-meta">실증 품목: 수박 · 멜론 (1,260㎡)</p>
+                    <p class="farm-desc">ICT 스마트 환경 제어와 결합된 고상재배 실증으로 멜론 및 수박의 주년 고품질 생산성 검증 완료</p>
+                </div>
+
+                <!-- 농가 2 -->
+                <div class="glass-card farm-card reveal delay-1">
+                    <div class="farm-region">전북 고창</div>
+                    <h3>고창 대규모 실증단지 (김윤환 농가)</h3>
+                    <p class="farm-meta">실증 품목: 수박 · 멜론 (25,000㎡)</p>
+                    <p class="farm-desc">국내 최대 규모 수박 주산지 고창에서 대면적 고상재배의 경제성 및 생력화 효과 대규모 실증</p>
+                </div>
+
+                <!-- 농가 3 -->
+                <div class="glass-card farm-card reveal delay-2">
+                    <div class="farm-region">충북 제천</div>
+                    <h3>제천 봉양 실증농장 (박영수 농가)</h3>
+                    <p class="farm-meta">실증 품목: 대과종 수박 (관수 데이터 분석)</p>
+                    <p class="farm-desc">2025-2026 연차별 정밀 관수량 데이터 측정 및 1차 출하 431수 전량 특품 판정 기록 달성</p>
+                </div>
+
+                <!-- 농가 4 -->
+                <div class="glass-card farm-card reveal">
+                    <div class="farm-region">경기 안성</div>
+                    <h3>안성 실증농장 (장미연 농가)</h3>
+                    <p class="farm-meta">실증 품목: 수박 · 멜론 (수도권 거점)</p>
+                    <p class="farm-desc">수도권 근교 시설 원예 농가 맞춤형 다단 수직 고상재배 모델 현장 검증 및 보급 교육 거점</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. 기술 규격 및 상세 사양 (Spec Table) -->
+        <section id="spec" class="section spec-section">
+            <div class="section-header reveal">
+                <span class="section-subtitle">SYSTEM SPECIFICATIONS</span>
+                <h2>그린씨드 고상재배장치 표준 규격서</h2>
+                <p>하우스 규격과 재배 작목(대과종 수박, 멜론 등)에 따라 맞춤 설계 및 시공 지원</p>
+            </div>
+
+            <div class="spec-table-container glass-card reveal">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>구분 항목</th>
+                            <th>수박 전용 고하중 표준형 (GS-Watermelon-100)</th>
+                            <th>멜론·엽채 겸용 모듈형 (GS-Multi-200)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>베드 높이 (지상고)</strong></td>
+                            <td>850mm ~ 1,100mm (작업자 체형 맞춤 인체공학 조절)</td>
+                            <td>900mm ~ 1,200mm (다단 호환 구조)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>베드 구조 및 소재</strong></td>
+                            <td>통기성 특수 메쉬 베드 + 고내식성 용융아연 알루미늄</td>
+                            <td>경량 알루미늄 프로파일 + UV 차단 특수 방수 패브릭</td>
+                        </tr>
+                        <tr>
+                            <td><strong>허용 지지 하중</strong></td>
+                            <td>과실당 10~15kg 대과종 수직 하중 완벽 지지</td>
+                            <td>과실당 3~5kg 연속 거치 설계</td>
+                        </tr>
+                        <tr>
+                            <td><strong>관수 및 배수 방식</strong></td>
+                            <td>압력보상형 정밀 점적 단추 + 순환형 회수 드레인</td>
+                            <td>마이크로 점적관수 + 자동 수분 센서 연동</td>
+                        </tr>
+                        <tr>
+                            <td><strong>적용 인증 및 특허</strong></td>
+                            <td>등록 특허 제 10-3017483 호 / 실용신안 출원 적용</td>
+                            <td>출원 특허 AP070909 스마트팜 메쉬베드 적용</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 9. 사업 제안 문의 및 제안서 신청 (CTA) -->
+        <section id="contact" class="section cta-section">
+            <div class="cta-card glass-card reveal">
+                <div class="cta-header">
+                    <h2>지자체 보조사업 · 스마트팜 시범사업 도입 문의</h2>
+                    <p>부산대학교 산학협력 연구보고서 요약본 및 맞춤형 견적 제안서를 신속하게 제공해 드립니다.</p>
+                </div>
+
+                <form id="proposalForm" class="proposal-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="orgName">지자체 / 기관 / 농가명 *</label>
+                            <input type="text" id="orgName" placeholder="예: 제천시 농업기술센터 / 00농장" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userName">담당자 성함 *</label>
+                            <input type="text" id="userName" placeholder="홍길동" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="userContact">연락처 *</label>
+                            <input type="tel" id="userContact" placeholder="010-0000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userEmail">이메일 주소 *</label>
+                            <input type="email" id="userEmail" placeholder="example@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiryType">문의 목적</label>
+                        <select id="inquiryType">
+                            <option value="government_support">🏛️ 지자체 스마트팜 보조사업 및 시범사업 제안</option>
+                            <option value="rnd_coop">🔬 농업기술 연구 실증 및 산학협력 문의</option>
+                            <option value="farm_quote">🚜 일반 시설 원예 농가 맞춤 시공 견적 문의</option>
+                            <option value="pdf_request">📄 2026 사업 제안서 및 실증 보고서 PDF 요청</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userMessage">하우스 면적 및 재배 희망 작목</label>
+                        <textarea id="userMessage" rows="3" placeholder="예: 단동 하우스 3개동(약 600평)에 수박 고상재배장치 설치 시공 견적 및 보조사업 제안서 요청합니다."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-block">사업 제안서 및 실증 데이터 신청하기</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer>
+    <!-- 10. 푸터 (사용자 코멘트 명확 반영: 조국래 대표 및 문의처 010-8730-2147 / 010-2687-4630) -->
+    <footer class="footer">
         <div class="footer-content">
-            <div class="logo">GOJANG<span>FARM</span></div>
-            <p>&copy; 2026 고장재배장치 주식회사. All rights reserved.</p>
+            <div class="footer-logo">
+                GREENSEED<span> FARM</span>
+            </div>
+            <p class="footer-desc">농업회사법인 그린씨드 주식회사 | 산학협력 주관: 부산대학교 원예생명과학과</p>
+            <div class="footer-info">
+                <span>사업총괄: 조국래 대표</span> | <span>연구책임: 안성광 교수</span> | <span>문의처: 010-8730-2147 / 010-2687-4630</span>
+            </div>
+            <p class="copyright">&copy; 2026 농업회사법인 그린씨드 주식회사 & 부산대학교 산학협력단. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- 성공 알림 토스트 (Toast) 컴포넌트 -->
+    <div id="toast" class="toast">
+        <div class="toast-icon">✅</div>
+        <div class="toast-content">
+            <div class="toast-title">제안서 접수 완료</div>
+            <div class="toast-message">담당 연구원 및 전문 컨설턴트가 신속히 연락드리겠습니다.</div>
+        </div>
+    </div>
+
+    <!-- 스크립트 연결 -->
     <script src="script.js"></script>
 </body>
 </html>
