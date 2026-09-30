@@ -75,14 +75,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 히어로 섹션 진입 시 숫자 카운팅 시작
+    // 접속 즉시 카운팅 애니메이션 실행 보장
+    startCountAnimation();
+
+    // 히어로 섹션 재진입 시 카운트 재트리거
     const heroSection = document.querySelector('.hero');
     if (heroSection) {
         const heroObserver = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
                 startCountAnimation();
             }
-        }, { threshold: 0.3 });
+        }, { threshold: 0.1 });
         heroObserver.observe(heroSection);
     }
 
