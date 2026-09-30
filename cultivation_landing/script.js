@@ -145,12 +145,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const metricsList = document.querySelector('.crop-metrics-list');
                 if (metricsList) {
                     metricsList.innerHTML = data.metrics.map(m => `
-                        <div class="metric-row">
-                            <span class="metric-name">${m.name}</span>
+                        <div class="metric-card">
+                            <div class="metric-card-header">
+                                <span class="metric-name">${m.name}</span>
+                                <span class="metric-badge ${m.isHighlight ? 'highlight-badge' : ''}">${m.val}</span>
+                            </div>
                             <div class="progress-bar-bg">
                                 <div class="progress-bar-fill ${m.isHighlight ? 'highlight-fill' : ''}" style="width: ${m.width};"></div>
                             </div>
-                            <span class="metric-val">${m.val}</span>
                         </div>
                     `).join('');
                 }
