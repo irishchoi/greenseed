@@ -229,7 +229,7 @@
         <section id="data-results" class="section research-data">
             <div class="section-header reveal">
                 <span class="section-subtitle">REAL FIELD RESEARCH DATA</span>
-                <h2>정부 과제 현장 실증 <br class="mobile-only">결과 데이터</h2>
+                <h2>정부 과제 <br class="mobile-only">현장 실증 결과 데이터</h2>
                 <p>부산대학교 산학협력단 및 실증 농가에서 정밀 측정한 실제 수확 및 품질 지표입니다.</p>
             </div>
 
@@ -334,7 +334,8 @@
             </div>
 
             <div class="spec-table-container glass-card reveal">
-                <table class="spec-table">
+                <!-- 데스크톱용 테이블 (768px 이상에서만 표시) -->
+                <table class="spec-table spec-desktop-only">
                     <thead>
                         <tr>
                             <th>구분 항목</th>
@@ -370,6 +371,65 @@
                         </tr>
                     </tbody>
                 </table>
+
+                <!-- 모바일용 카드 리스트 (768px 이하에서만 표시) -->
+                <div class="spec-mobile-cards">
+                    <div class="spec-mobile-item">
+                        <div class="spec-mobile-label">베드 높이 (지상고)</div>
+                        <div class="spec-mobile-row">
+                            <span class="spec-model-tag">🍉 수박 표준형</span>
+                            <span>850~1,100mm (인체공학 조절)</span>
+                        </div>
+                        <div class="spec-mobile-row">
+                            <span class="spec-model-tag melon">🍈 멜론 모듈형</span>
+                            <span>900~1,200mm (다단 호환)</span>
+                        </div>
+                    </div>
+                    <div class="spec-mobile-item">
+                        <div class="spec-mobile-label">베드 구조 및 소재</div>
+                        <div class="spec-mobile-row">
+                            <span class="spec-model-tag">🍉 수박 표준형</span>
+                            <span>특수 메쉬 베드 + 용융아연 알루미늄</span>
+                        </div>
+                        <div class="spec-mobile-row">
+                            <span class="spec-model-tag melon">🍈 멜론 모듈형</span>
+                            <span>경량 알루미늄 + UV 차단 방수 패브릭</span>
+                        </div>
+                    </div>
+                    <div class="spec-mobile-item">
+                        <div class="spec-mobile-label">허용 지지 하중</div>
+                        <div class="spec-mobile-row">
+                            <span class="spec-model-tag">🍉 수박 표준형</span>
+                            <span>과실당 10~15kg 수직 하중 지지</span>
+                        </div>
+                        <div class="spec-mobile-row">
+                            <span class="spec-model-tag melon">🍈 멜론 모듈형</span>
+                            <span>과실당 3~5kg 연속 거치</span>
+                        </div>
+                    </div>
+                    <div class="spec-mobile-item">
+                        <div class="spec-mobile-label">관수 및 배수 방식</div>
+                        <div class="spec-mobile-row">
+                            <span class="spec-model-tag">🍉 수박 표준형</span>
+                            <span>정밀 점적 단추 + 순환형 회수 드레인</span>
+                        </div>
+                        <div class="spec-mobile-row">
+                            <span class="spec-model-tag melon">🍈 멜론 모듈형</span>
+                            <span>마이크로 점적관수 + 수분 센서 연동</span>
+                        </div>
+                    </div>
+                    <div class="spec-mobile-item">
+                        <div class="spec-mobile-label">적용 인증 및 특허</div>
+                        <div class="spec-mobile-row">
+                            <span class="spec-model-tag">🍉 수박 표준형</span>
+                            <span>등록 특허 제 10-3017483 호</span>
+                        </div>
+                        <div class="spec-mobile-row">
+                            <span class="spec-model-tag melon">🍈 멜론 모듈형</span>
+                            <span>출원 특허 AP070909 메쉬베드</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -377,7 +437,7 @@
         <section id="contact" class="section cta-section">
             <div class="cta-card glass-card reveal">
                 <div class="cta-header">
-                    <h2>지자체 보조사업 · 스마트팜 <br class="mobile-only">시범사업 도입 문의</h2>
+                    <h2>지자체 보조사업 · <br class="mobile-only">스마트팜 시범사업 <br class="mobile-only">도입 문의</h2>
                     <p>부산대학교 산학협력 연구보고서 요약본 및 맞춤형 견적 제안서를 신속하게 제공해 드립니다.</p>
                 </div>
 

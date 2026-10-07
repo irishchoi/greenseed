@@ -725,6 +725,63 @@ a {
     font-size: 0.95rem;
 }
 
+/* 모바일 규격 카드 (기본: 숨김, 768px 이하에서 표시) */
+.spec-mobile-cards {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.spec-mobile-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 14px;
+    padding: 1.1rem 1.2rem;
+}
+
+.spec-mobile-label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.spec-mobile-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.4rem 0;
+    font-size: 0.88rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+.spec-mobile-row + .spec-mobile-row {
+    border-top: 1px dashed rgba(255, 255, 255, 0.05);
+    padding-top: 0.5rem;
+}
+
+.spec-model-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    background: rgba(16, 185, 129, 0.12);
+    color: var(--primary-light);
+    padding: 0.15rem 0.55rem;
+    border-radius: 6px;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    width: fit-content;
+    margin-bottom: 0.15rem;
+}
+
+.spec-model-tag.melon {
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    border-color: rgba(56, 189, 248, 0.25);
+}
+
 /* 12. 문의 및 제안서 신청 폼 (CTA) */
 .cta-card {
     max-width: 850px;
@@ -962,6 +1019,61 @@ a {
     /* 폼 모바일 레이아웃 */
     .farms-grid { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
+
+    /* 규격 테이블: 데스크톱 테이블 숨기고 모바일 카드 표시 */
+    .spec-desktop-only {
+        display: none !important;
+    }
+    .spec-mobile-cards {
+        display: flex !important;
+    }
+    .spec-table-container {
+        padding: 1.2rem 1rem;
+    }
+
+    /* CTA 문의 폼 모바일 최적화 */
+    .cta-card {
+        padding: 1.8rem 1.2rem;
+    }
+    .cta-header {
+        margin-bottom: 1.5rem;
+    }
+    .cta-header h2 {
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+    .cta-header p {
+        font-size: 0.9rem;
+    }
+
+    /* 데이터 대시보드 탭 버튼 모바일 정렬 */
+    .crop-tabs-container {
+        padding: 1.5rem 1rem;
+    }
+    .crop-tab-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .crop-tab-btn {
+        width: 100%;
+        text-align: left;
+        padding: 0.7rem 1rem;
+        font-size: 0.88rem;
+    }
+    .crop-tab-content {
+        gap: 1.5rem;
+    }
+    .crop-detail-left h3 {
+        font-size: 1.35rem;
+        line-height: 1.4;
+    }
+
+    /* metric-card 모바일 좌측 정렬 강화 */
+    .metric-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+    }
 }
 
 @media (max-width: 600px) {
