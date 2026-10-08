@@ -1,29 +1,29 @@
 /* =========================================================
    [그린씨드 x 부산대학교 수박 고상재배장치 제안서 style.css]
-   - 가먼트 테라코타 & 멜론 앰버 글래스모피즘 브랜드 팔레트
-   - 수박과 멜론의 겉과 속, 결실의 온기를 담은 프리미엄 톤앤매너
+   - 온화한 앤틱 세이지 그린(#7B8E7D) & 테라코타/앰버 글래스모피즘
+   - 수박과 멜론의 겉(세이지 잎)과 속(테라코타 과육 & 앰버 결실)의 시각적 스토리
    - 상세 한글 주석 포함 (생략 없음)
 ========================================================= */
 
-/* 1. 디자인 시스템 변수 정의 ([안 1] 가먼트 테라코타 & 멜론 앰버) */
+/* 1. 디자인 시스템 변수 정의 (앤틱 세이지 그린 #7B8E7D 테마) */
 :root {
-    --bg-dark: #181412;            /* 비옥한 토양과 농업의 깊이감을 주는 어스 딥 브라운 */
-    --bg-surface: #241E1B;         /* 웜 차콜 서피스 */
-    --text-main: #F7F3ED;          /* 샌드 캔버스 베이지 메인 텍스트 */
-    --text-muted: #B8ADA5;         /* 뮤티드 토프 보조 텍스트 */
+    --bg-dark: #7B8E7D;            /* 앤틱 세이지 그린 배경 (온화하고 자연스러운 어스 톤) */
+    --bg-surface: #687B6A;         /* 조금 더 깊이감 있는 딥 세이지 서피스 */
+    --text-main: #FFFFFF;          /* 명확하고 또렷한 캔버스 화이트 텍스트 */
+    --text-muted: #E5EDE7;         /* 부드러운 세이지 틴트 오프화이트 보조 텍스트 */
     
-    --primary: #D86C57;            /* 가먼트 수박 테라코타 Red (농익은 과육과 결실) */
-    --primary-light: #EFA494;      /* 소프트 샌드 코랄 (텍스트/뱃지 강조) */
-    --primary-glow: rgba(216, 108, 87, 0.4); /* 테라코타 레드 글로우 */
-    --accent: #F2A65A;             /* 숙성 멜론 앰버 Orange (포인트 및 결실) */
+    --primary: #E06D53;            /* 가먼트 수박 테라코타 Red (세이지 배경 대비 최적화) */
+    --primary-light: #FFB3A3;      /* 소프트 샌드 코랄 (텍스트/뱃지 하이라이트) */
+    --primary-glow: rgba(224, 109, 83, 0.45); /* 테라코타 글로우 */
+    --accent: #F7B267;             /* 숙성 멜론 앰버 Orange (포인트 및 결실) */
 
     --danger: #ef4444;
-    --danger-bg: rgba(239, 68, 68, 0.1);
+    --danger-bg: rgba(239, 68, 68, 0.18);
     
-    --glass-bg: rgba(255, 245, 240, 0.04);
-    --glass-border: rgba(216, 108, 87, 0.18);
-    --glass-hover-border: rgba(242, 166, 90, 0.5);
-    --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.65);
+    --glass-bg: rgba(0, 0, 0, 0.18); /* 세이지 배경 위에서 입체감을 주는 가독성 높은 글래스 */
+    --glass-border: rgba(255, 255, 255, 0.22);
+    --glass-hover-border: rgba(247, 178, 103, 0.65);
+    --card-shadow: 0 10px 30px -10px rgba(40, 55, 42, 0.5);
 
     --font-main: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
 }
@@ -197,13 +197,13 @@ a {
     align-items: center;
     z-index: 1000;
     transition: all 0.3s ease;
-    background: rgba(24, 20, 18, 0.85);
+    background: rgba(123, 142, 125, 0.88);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--glass-border);
 }
 
 .navbar.scrolled {
-    background: rgba(24, 20, 18, 0.96);
+    background: rgba(104, 123, 106, 0.96);
     padding: 0.8rem 5%;
 }
 
@@ -225,9 +225,9 @@ a {
 .badge {
     font-size: 0.72rem;
     font-weight: 600;
-    background: rgba(216, 108, 87, 0.18);
-    color: var(--primary-light);
-    border: 1px solid rgba(216, 108, 87, 0.35);
+    background: rgba(224, 109, 83, 0.22);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 0.2rem 0.55rem;
     border-radius: 20px;
     display: inline-block;
@@ -244,12 +244,12 @@ a {
 .nav-links a {
     font-size: 0.92rem;
     font-weight: 500;
-    color: #cbd5e1;
+    color: #ffffff;
     white-space: nowrap;
 }
 
 .nav-links a:hover {
-    color: var(--primary-light);
+    color: var(--accent);
 }
 
 /* 5. 히어로 섹션 (Hero) */
@@ -274,7 +274,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.65);
+    filter: brightness(0.55);
 }
 
 .overlay {
@@ -283,7 +283,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 20% 50%, rgba(24, 20, 18, 0.95) 0%, rgba(24, 20, 18, 0.68) 100%);
+    background: radial-gradient(circle at 20% 50%, rgba(104, 123, 106, 0.92) 0%, rgba(123, 142, 125, 0.75) 100%);
 }
 
 .hero-content {
@@ -843,7 +843,7 @@ a {
 .footer {
     border-top: 1px solid var(--glass-border);
     padding: 4rem 8%;
-    background: #120e0d;
+    background: #5A6D5D;
     text-align: center;
 }
 
@@ -859,13 +859,13 @@ a {
 
 .footer-info {
     font-size: 0.88rem;
-    color: #cbd5e1;
+    color: #e5ede7;
     margin: 1rem 0;
 }
 
 .copyright {
     font-size: 0.85rem;
-    color: #64748b;
+    color: #d1ded4;
 }
 
 /* 14. 토스트 알림 */
@@ -873,15 +873,15 @@ a {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    background: rgba(36, 30, 27, 0.96);
+    background: rgba(104, 123, 106, 0.96);
     backdrop-filter: blur(12px);
-    border: 1px solid var(--primary);
+    border: 1px solid var(--accent);
     border-radius: 14px;
     padding: 1.2rem 1.6rem;
     display: flex;
     align-items: center;
     gap: 1rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     transform: translateY(100px);
     opacity: 0;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
